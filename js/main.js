@@ -24,7 +24,7 @@ if ( isNaN (degreCelcius)){
 let F = degreCelcius * 9/5+32;
 
 //Afficher les resultats
-alert(` ${degreCelcius} °C =  ${F} °F` );
+alert(`${degreCelcius} °C =  ${F} °F`);
 
 
 
