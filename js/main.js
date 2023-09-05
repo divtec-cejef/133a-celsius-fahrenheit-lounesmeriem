@@ -23,7 +23,7 @@ if ( isNaN (degreCelcius)){
 // Calculer la température en °F
 let F = degreCelcius * 9/5+32;
 
-//Afficher les résultats
+//Afficher les resultats
 alert(` ${degreCelcius} °C =  ${F} °F` );
 
 
