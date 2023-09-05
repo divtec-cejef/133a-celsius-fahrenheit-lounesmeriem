@@ -1,15 +1,26 @@
 /**
  * Fichier de base pour application web HTML/CSS/JS
- * @author  Steve Fallet
+ * @author  meriem lounes
  * @version 0.1
- * @since   2019-08-19
+ * @since   2023.09.05
  */
+// Demande un interprétation stricte du code
+'use strict';
 
-(function main() {
-  'use strict'; // Demande un interprétation stricte du code
+// ecrire un programme qui demande a l'utilisateur de saisir un degrés celsus
+let  degreCelcius = prompt(" Temperature en Celcius : ");
 
-  let a = 'Bonjour';
+//transformer la valeur en float
+degreCelcius = parseFloat(degreCelcius);
 
-  console.log(a);
-}()); // Main IIFE
+// tester si c’est bien un nombre, sinon message erreur
+if ( isNaN (degreCelcius)){
+    alert('Entrez un nombre!');
+}else{
+    // Calculer la température en °F
+    let F = degreCelcius * 9/5+32;
+    //affiche le resultat
+    alert(` ${degreCelcius} °C = ${F} °F`);
+}
+
 
