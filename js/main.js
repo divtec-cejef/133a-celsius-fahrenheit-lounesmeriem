@@ -8,20 +8,20 @@
 'use strict';
 
 // ecrire un programme qui demande a l'utilisateur de saisir un degrés celsus
-let  degreCelcius = prompt("Annonce de la page https://cdpn.io: Temperature en Celcius");
-let  C =0;
-let F = C * 9/5+32;
+let  degreCelcius = prompt(" Temperature en Celcius : ");
+let F = degreCelcius * 9/5+32;
 
-alert('Annonce de la page https://cdpn.io: '+ degreCelcius+'C°'+ F );
+alert(` ${degreCelcius} °C =  ${F} °F` );
+
 
 //transformer les degres en entier
-degreCelcius = parseInt(degreCelcius);
-C = parseInt(C);
-F = parseInt(F);
+degreCelcius = parseFloat(degreCelcius);
+
 
 // a chaque fois qu'on a un nombre il faut le tester avec Nan
 if ( isNaN (degreCelcius)){
     alert('Entre un nombre!');
 }else{
-    alert(` ${degreCelcius}`);
+    alert(` ${degreCelcius} °C =  ${F} °F`);
 }
+
