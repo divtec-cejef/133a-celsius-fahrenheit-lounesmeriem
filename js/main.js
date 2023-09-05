@@ -15,25 +15,12 @@ degreCelcius = parseFloat(degreCelcius);
 
 // tester si c’est bien un nombre, sinon message erreur
 if ( isNaN (degreCelcius)){
-    alert('Entre un nombre!');
+    alert('Entrez un nombre!');
 }else{
-    alert(` ${degreCelcius} °C =  ${F} °F`);
+    // Calculer la température en °F
+    let F = degreCelcius * 9/5+32;
+    //affiche le resultat
+    alert(` ${degreCelcius} °C = ${F} °F`);
 }
 
-// Calculer la température en °F
-let F = degreCelcius * 9/5+32;
-
-//Afficher les resultats
-alert(`${degreCelcius} °C =  ${F} °F`);
-
-
-
-
-
-// a chaque fois qu'on a un nombre il faut le tester avec Nan
-//if ( isNaN (degreCelcius)){
-   // alert('Entre un nombre!');
-//}else{
-  //  alert(` ${degreCelcius} °C =  ${F} °F`);
-//}
 
