@@ -1,15 +1,27 @@
 /**
  * Fichier de base pour application web HTML/CSS/JS
- * @author  Steve Fallet
+ * @author  meriem lounes
  * @version 0.1
- * @since   2019-08-19
+ * @since   2023.09.05
  */
+// Demande un interprétation stricte du code
+'use strict';
 
-(function main() {
-  'use strict'; // Demande un interprétation stricte du code
+// ecrire un programme qui demande a l'utilisateur de saisir un degrés celsus
+let  degreCelcius = prompt("Annonce de la page https://cdpn.io: Temperature en Celcius");
+let  C =0;
+let F = C * 9/5+32;
 
-  let a = 'Bonjour';
+alert('Annonce de la page https://cdpn.io: '+ degreCelcius+'C°'+ F );
 
-  console.log(a);
-}()); // Main IIFE
+//transformer les degres en entier
+degreCelcius = parseInt(degreCelcius);
+C = parseInt(C);
+F = parseInt(F);
 
+// a chaque fois qu'on a un nombre il faut le tester avec Nan
+if ( isNaN (degreCelcius)){
+    alert('Entre un nombre!');
+}else{
+    alert(` ${degreCelcius}`);
+}
