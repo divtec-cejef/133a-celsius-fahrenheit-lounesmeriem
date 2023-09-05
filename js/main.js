@@ -30,5 +30,10 @@ alert(` ${degreCelcius} °C =  ${F} °F` );
 
 
 
-
+// a chaque fois qu'on a un nombre il faut le tester avec Nan
+//if ( isNaN (degreCelcius)){
+   // alert('Entre un nombre!');
+//}else{
+  //  alert(` ${degreCelcius} °C =  ${F} °F`);
+//}
 
