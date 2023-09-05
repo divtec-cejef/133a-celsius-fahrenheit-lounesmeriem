@@ -9,13 +9,25 @@
 
 // ecrire un programme qui demande a l'utilisateur de saisir un degrés celsus
 let  degreCelcius = prompt(" Temperature en Celcius : ");
+
+//transformer la valeur en float
+degreCelcius = parseFloat(degreCelcius);
+
+// tester si c’est bien un nombre, sinon message erreur
+if ( isNaN (degreCelcius)){
+    alert('Entre un nombre!');
+}else{
+    alert(` ${degreCelcius} °C =  ${F} °F`);
+}
+
+// Calculer la température en °F
 let F = degreCelcius * 9/5+32;
 
+//Afficher les résultats
 alert(` ${degreCelcius} °C =  ${F} °F` );
 
 
-//transformer les degres en entier
-degreCelcius = parseFloat(degreCelcius);
+
 
 
 // a chaque fois qu'on a un nombre il faut le tester avec Nan
