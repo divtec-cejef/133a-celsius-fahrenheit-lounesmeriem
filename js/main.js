@@ -40,3 +40,4 @@ btConvertir.addEventListener('click', () => {
     // Vide le champ Article
     btReinitialiser.value = '';
 });
+
