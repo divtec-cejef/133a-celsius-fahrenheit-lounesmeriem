@@ -6,7 +6,7 @@
  */
 // Demande un interprétation stricte du code
 'use strict';
-
+/* etape 1 de l'exercice*/
 // ecrire un programme qui demande a l'utilisateur de saisir un degrés celsus
 let  degreCelcius = prompt(" Temperature en Celcius : ");
 
@@ -23,4 +23,9 @@ if ( isNaN (degreCelcius)){
     alert(` ${degreCelcius} °C = ${F} °F`);
 }
 
+
+/* etape 2 de l'exercice */
+//récupère le h2
+
+let h2 = document.querySelector('h2');
 
