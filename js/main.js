@@ -6,6 +6,7 @@
  */
 // Demande un interprétation stricte du code
 'use strict';
+
 /* etape 1 de l'exercice*/
 // ecrire un programme qui demande a l'utilisateur de saisir un degrés celsus
 let  degreCelcius = prompt(" Temperature en Celcius : ");
@@ -25,7 +26,17 @@ if ( isNaN (degreCelcius)){
 
 
 /* etape 2 de l'exercice */
-//récupère le h2
 
-let h2 = document.querySelector('h2');
+//récupère les champs de texte ,bouton, paragrphe
+let saisirLaTemperature = document.getElementById('temperature');
+let btConvertir = document.querySelector('.convertir');
+let btReinitialiser = document.querySelector('.reinitialiser');
+let monHistorique = document.querySelector('.historique');
+console.log(saisirLaTemperature);
 
+// Ecoute événement click du bouton
+btConvertir.addEventListener('click', () => {
+    monHistorique.innerHTML += '<li>' + saisirLaTemperature.value + '</li>';
+    // Vide le champ Article
+    btReinitialiser.value = '';
+});

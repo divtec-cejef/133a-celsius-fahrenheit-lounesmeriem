@@ -181,6 +181,9 @@ input { /* 1 */
 button,input.convertir{
     background-color: #ff0000;
 }
+button,input.reinitialiser{
+    background-color: #a9a9a9;
+}
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
