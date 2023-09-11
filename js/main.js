@@ -7,7 +7,7 @@
 // Demande un interprétation stricte du code
 'use strict';
 
-/* etape 1 de l'exercice*/
+/* etape 1 de l'exercice
 // ecrire un programme qui demande a l'utilisateur de saisir un degrés celsus
 let  degreCelcius = prompt(" Temperature en Celcius : ");
 
@@ -23,21 +23,45 @@ if ( isNaN (degreCelcius)){
     //affiche le resultat
     alert(` ${degreCelcius} °C = ${F} °F`);
 }
-
+*/
 
 /* etape 2 de l'exercice */
 
 //récupère les champs de texte ,bouton, paragrphe
-let saisirLaTemperature = document.getElementById('temperature');
-let btConvertir = document.querySelector('.convertir');
-let btReinitialiser = document.querySelector('.reinitialiser');
-let monHistorique = document.querySelector('.historique');
-console.log(saisirLaTemperature);
+let champTemperatureC = document.getElementById("temperatureC");
+let boutonConvertir = document.getElementById("convertir");
+let paragrapheResultat = document.getElementById("resultat");
+let historiqueListe = document.getElementById("historique");
+
+
 
 // Ecoute événement click du bouton
-btConvertir.addEventListener('click', () => {
-    monHistorique.innerHTML += '<li>' + saisirLaTemperature.value + '</li>';
-    // Vide le champ Article
-    btReinitialiser.value = '';
+boutonConvertir.addEventListener('click', () => {
+    //récupérer la valeur saisie par l'utilisateur
+    let temperatureC = parseFloat(champTemperatureC.value);
+    //vérifier si la saisie est un nombre valide
+    if (isNaN(temperatureC)) {
+        alert("Veuillez entrer un nombre valide en °C.");
+    }else {
+        //convertir en °F
+        let temperatureF = (temperatureC*9/5)+32;
+        paragrapheResultat.textContent = temperatureC + temperatureF.toFixed(2)+"°F";
+
+        //ajouter l'entree a l'historique
+        let nouvelleConversion = document.createElement("li");
+        nouvelleConversion.textContent =temperatureC +"°C = "+ temperatureF.toFixed(2)+"°F";
+        historiqueListe.appendChild(nouvelleConversion);
+
+        //effacer le champs de saisie
+        champTemperatureC.value =" ";
+    }
 });
+
+
+
+
+
+
+
+
 

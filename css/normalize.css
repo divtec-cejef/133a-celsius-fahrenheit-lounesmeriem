@@ -178,11 +178,14 @@ input { /* 1 */
     overflow: visible;
 
 }
-button,input.convertir{
+.id button{
     background-color: #ff0000;
 }
 button,input.reinitialiser{
     background-color: #a9a9a9;
+}
+ul {
+    padding: 0;
 }
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
