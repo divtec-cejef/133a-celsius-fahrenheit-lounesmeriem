@@ -2,12 +2,29 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Convertisseur</title>
     <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
 <img src="img/js-logo.png" alt="Logo JavaScript">
 <h1>Structure de base pour application Web</h1>
+<h2>Convertisseur Celsius >Fahrenheit</h2>
+<!--Créer un champ texte pour la saisie de la température en °C -->
+<form method ="get" action =" ">
+    <p>
+        <label for ="temperatureC">Temperature en °C</label>:<br>
+        <input type="text"  id="temperatureC">
+    </p>
+</form>
+
+<button id="convertir">Convertir en °F</button>
+
+<input class = "reinitialiser" type="reset" value="Réinitialiser">
+
+<p id ="resultat">Résultat : </p>
+
+<ul id="historique">Historique</ul>
+
 
 <!-- JavaScript -->
 <script src="js/main.js"></script>
